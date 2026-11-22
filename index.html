@@ -3,77 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f9dfe3" />
   <title>Flowers For You</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="sky" aria-hidden="true">
-    <div class="stars" id="stars"></div>
-    <div class="shooting-star"></div>
-    <div class="moon"></div>
-    <div class="horizon"></div>
-    <div class="sea"></div>
-  </div>
+  <div class="sky" aria-hidden="true"></div>
 
-  <main class="stage" id="stage">
-    <h1 class="title">Flowers For You</h1>
+ 
 
     <button class="bud" id="openBtn" aria-label="Tap to open the flowers">
-      <span class="bud-petals" aria-hidden="true">
-        <span class="flower" style="--a:-40deg; --s:.92;"></span>
-        <span class="flower" style="--a:-24deg; --s:1;"></span>
-        <span class="flower" style="--a:-9deg; --s:.86;"></span>
-        <span class="flower" style="--a:9deg; --s:.86;"></span>
-        <span class="flower" style="--a:24deg; --s:1;"></span>
-        <span class="flower" style="--a:40deg; --s:.92;"></span>
-      </span>
-
-      <svg class="bud-heart" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <radialGradient id="heartGrad" cx="30%" cy="16%" r="88%">
-            <stop offset="0" stop-color="#ffe2ff"/>
-            <stop offset=".14" stop-color="#f2a6ff"/>
-            <stop offset=".44" stop-color="#cd52f2"/>
-            <stop offset=".74" stop-color="#8a1ec9"/>
-            <stop offset="1" stop-color="#3a0460"/>
-          </radialGradient>
-          <radialGradient id="heartShade" cx="62%" cy="72%" r="72%">
-            <stop offset=".35" stop-color="#2a0544" stop-opacity="0"/>
-            <stop offset="1" stop-color="#1b0330" stop-opacity=".68"/>
-          </radialGradient>
-          <linearGradient id="heartRim" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#ffe4ff" stop-opacity=".9"/>
-            <stop offset=".45" stop-color="#e3a6ff" stop-opacity=".35"/>
-            <stop offset="1" stop-color="#4a076f" stop-opacity=".55"/>
-          </linearGradient>
-          <filter id="heartSoft" x="-40%" y="-40%" width="180%" height="180%">
-            <feGaussianBlur stdDeviation="2.6"/>
-          </filter>
-          <clipPath id="heartClip">
-            <path d="M100 172 C60 140 16 104 16 62 C16 30 40 12 68 12 C86 12 98 22 100 40 C102 22 114 12 132 12 C160 12 184 30 184 62 C184 104 140 140 100 172Z"/>
-          </clipPath>
-        </defs>
-        <g clip-path="url(#heartClip)">
-          <path d="M100 172 C60 140 16 104 16 62 C16 30 40 12 68 12 C86 12 98 22 100 40 C102 22 114 12 132 12 C160 12 184 30 184 62 C184 104 140 140 100 172Z" fill="url(#heartGrad)"/>
-          <path d="M100 172 C60 140 16 104 16 62 C16 30 40 12 68 12 C86 12 98 22 100 40 C102 22 114 12 132 12 C160 12 184 30 184 62 C184 104 140 140 100 172Z" fill="url(#heartShade)"/>
-          <path d="M100 44 C92 84 94 126 100 168" fill="none" stroke="#36045a" stroke-width="3" opacity=".22"/>
-          <path d="M100 44 C72 62 54 86 50 118" fill="none" stroke="#36045a" stroke-width="2.2" opacity=".16"/>
-          <path d="M100 44 C128 62 146 86 150 118" fill="none" stroke="#36045a" stroke-width="2.2" opacity=".16"/>
-          <ellipse cx="62" cy="48" rx="21" ry="9.5" fill="#ffffff" opacity=".82" transform="rotate(-26 62 48)" filter="url(#heartSoft)"/>
-          <ellipse cx="122" cy="34" rx="8" ry="4.6" fill="#ffffff" opacity=".5" transform="rotate(-24 122 34)" filter="url(#heartSoft)"/>
-          <ellipse cx="46" cy="92" rx="16" ry="24" fill="#e6a6ff" opacity=".18" filter="url(#heartSoft)"/>
-          <path d="M44 110 C40 86 48 60 66 42" fill="none" stroke="#f4ccff" stroke-width="2.4" stroke-linecap="round" opacity=".2"/>
-          <circle cx="128" cy="72" r="1.9" fill="#fff" opacity=".55"/>
-          <circle cx="112" cy="50" r="1.2" fill="#fff" opacity=".4"/>
-        </g>
-        <path d="M100 172 C60 140 16 104 16 62 C16 30 40 12 68 12 C86 12 98 22 100 40 C102 22 114 12 132 12 C160 12 184 30 184 62 C184 104 140 140 100 172Z" fill="none" stroke="url(#heartRim)" stroke-width="1.8"/>
-      </svg>
-
-      <span class="ribbon" aria-hidden="true">
-        <span class="ribbon-tail ribbon-tail--l"></span>
-        <span class="ribbon-tail ribbon-tail--r"></span>
-        <span class="ribbon-knot"></span>
-      </span>
+      <img class="bud-cat" src="assets/hachiware.png" alt="" />
       <span class="bud-glow" aria-hidden="true"></span>
     </button>
 
@@ -81,149 +21,7 @@
 
     <div class="gift" id="gift">
       <div class="bouquet" aria-hidden="true">
-        <svg class="bouquet-svg" viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="roseBack" cx="36%" cy="24%" r="82%">
-              <stop offset="0" stop-color="#ff8fa5"/>
-              <stop offset=".4" stop-color="#c72042"/>
-              <stop offset=".78" stop-color="#7d0d24"/>
-              <stop offset="1" stop-color="#43040f"/>
-            </radialGradient>
-            <radialGradient id="roseOuter" cx="34%" cy="20%" r="84%">
-              <stop offset="0" stop-color="#ffc0cd"/>
-              <stop offset=".3" stop-color="#f2637e"/>
-              <stop offset=".68" stop-color="#b01633"/>
-              <stop offset="1" stop-color="#560615"/>
-            </radialGradient>
-            <radialGradient id="roseMid" cx="38%" cy="24%" r="78%">
-              <stop offset="0" stop-color="#ffd9e0"/>
-              <stop offset=".4" stop-color="#fb8aa1"/>
-              <stop offset=".78" stop-color="#cb2c4d"/>
-              <stop offset="1" stop-color="#8b0f28"/>
-            </radialGradient>
-            <radialGradient id="roseInner" cx="40%" cy="26%" r="72%">
-              <stop offset="0" stop-color="#ffeef2"/>
-              <stop offset=".46" stop-color="#ffa6b8"/>
-              <stop offset="1" stop-color="#d23a58"/>
-            </radialGradient>
-            <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2=".6">
-              <stop offset="0" stop-color="#3f8f56"/>
-              <stop offset=".55" stop-color="#2c6f42"/>
-              <stop offset="1" stop-color="#1b4a2c"/>
-            </linearGradient>
-            <linearGradient id="wrapGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#8b4bc9"/>
-              <stop offset=".45" stop-color="#6322a3"/>
-              <stop offset="1" stop-color="#2f0b55"/>
-            </linearGradient>
-
-            <symbol id="rose" viewBox="-50 -50 100 100">
-              <g stroke="#5a0716" stroke-width=".5" stroke-opacity=".45" stroke-linejoin="round">
-                <g fill="url(#roseBack)">
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(-10)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(62)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(134)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(206)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(278)"/>
-                </g>
-                <g fill="url(#roseOuter)">
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(18) scale(.82)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(78) scale(.82)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(138) scale(.82)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(198) scale(.82)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(258) scale(.82)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(318) scale(.82)"/>
-                </g>
-                <g fill="url(#roseMid)">
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(42) scale(.6)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(132) scale(.6)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(222) scale(.6)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(312) scale(.6)"/>
-                </g>
-                <g fill="url(#roseInner)">
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(8) scale(.42)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(128) scale(.42)"/>
-                  <path d="M0 16 C-20 20 -39 8 -43 -11 C-47 -31 -27 -47 -5 -43 C-3 -40 -1 -39 0 -41 C1 -39 3 -40 5 -43 C27 -47 47 -31 43 -11 C39 8 20 20 0 16Z" transform="rotate(248) scale(.42)"/>
-                </g>
-              </g>
-              <g fill="none" stroke="#5a0716" stroke-linecap="round" opacity=".22" stroke-width="1">
-                <path d="M-2 -42 C1 -32 3 -24 1 -16"/>
-                <path d="M32 -26 C25 -22 19 -16 16 -10"/>
-                <path d="M-33 -25 C-26 -21 -20 -16 -16 -10"/>
-                <path d="M41 3 C30 0 22 -3 14 -8"/>
-                <path d="M-40 4 C-30 1 -22 -2 -14 -8"/>
-              </g>
-              <g fill="none" stroke-linecap="round">
-                <path d="M0 7 C-6 7 -9 2 -6 -3 C-3 -8 4 -9 8 -4 C12 1 10 8 4 10 C-2 12 -8 8 -8 2" stroke="#6d091a" stroke-width="1.5" opacity=".7"/>
-                <path d="M0 1 C4 0 6 3 4 6 C2 9 -2 8 -4 5 C-6 1 -2 -3 2 -4 C7 -5 10 -1 9 4" stroke="#ffb9c6" stroke-width="1.05" opacity=".85"/>
-              </g>
-              <circle cx="1" cy="0" r="2" fill="#63081a" opacity=".85"/>
-              <circle cx=".2" cy="-.8" r=".75" fill="#ffe4e9" opacity=".9"/>
-              <ellipse cx="-18" cy="-22" rx="12" ry="4.6" fill="#fff" opacity=".22" transform="rotate(-34 -18 -22)"/>
-              <path d="M-41 -6 C-38 -28 -20 -44 2 -44" fill="none" stroke="#ffdde4" stroke-width="2.1" stroke-linecap="round" opacity=".55"/>
-              <circle cx="14" cy="-18" r="1.8" fill="#fff" opacity=".45"/>
-            </symbol>
-
-            <symbol id="leaf" viewBox="-2 -16 64 32">
-              <path d="M0 0 C14 -15 42 -15 58 0 C42 15 14 15 0 0Z" fill="url(#leafGrad)" stroke="#173f25" stroke-width="1"/>
-              <path d="M5 0 C20 -2 38 -2 54 0" fill="none" stroke="#5aa06d" stroke-width="1.3" stroke-linecap="round" opacity=".7"/>
-            </symbol>
-          </defs>
-
-          <g class="stems">
-            <g fill="none" stroke-linecap="round">
-              <path d="M210 340 C208 280 206 200 210 128" stroke="#133b21" stroke-width="10"/>
-              <path d="M210 340 C208 280 206 200 210 128" stroke="#2e6b40" stroke-width="4"/>
-              <path d="M196 338 C170 288 150 224 144 158" stroke="#133b21" stroke-width="9"/>
-              <path d="M196 338 C170 288 150 224 144 158" stroke="#2e6b40" stroke-width="3.6"/>
-              <path d="M224 338 C250 288 270 224 276 158" stroke="#133b21" stroke-width="9"/>
-              <path d="M224 338 C250 288 270 224 276 158" stroke="#2e6b40" stroke-width="3.6"/>
-              <path d="M188 338 C150 300 118 250 104 208" stroke="#133b21" stroke-width="8"/>
-              <path d="M188 338 C150 300 118 250 104 208" stroke="#2e6b40" stroke-width="3.2"/>
-              <path d="M232 338 C270 300 302 250 316 208" stroke="#133b21" stroke-width="8"/>
-              <path d="M232 338 C270 300 302 250 316 208" stroke="#2e6b40" stroke-width="3.2"/>
-              <path d="M203 340 C194 300 180 250 166 212" stroke="#133b21" stroke-width="7"/>
-              <path d="M203 340 C194 300 180 250 166 212" stroke="#2e6b40" stroke-width="2.8"/>
-              <path d="M217 340 C226 300 240 250 254 212" stroke="#133b21" stroke-width="7"/>
-              <path d="M217 340 C226 300 240 250 254 212" stroke="#2e6b40" stroke-width="2.8"/>
-            </g>
-            <use href="#leaf" x="0" y="0" width="52" height="26" transform="translate(150 260) rotate(-52)"/>
-            <use href="#leaf" x="0" y="0" width="46" height="23" transform="translate(170 300) rotate(-38)"/>
-            <use href="#leaf" x="0" y="0" width="52" height="26" transform="translate(270 258) rotate(52)"/>
-            <use href="#leaf" x="0" y="0" width="46" height="23" transform="translate(250 302) rotate(38)"/>
-            <use href="#leaf" x="0" y="0" width="44" height="22" transform="translate(196 240) rotate(-160)"/>
-            <use href="#leaf" x="0" y="0" width="44" height="22" transform="translate(228 246) rotate(160)"/>
-            <use href="#leaf" x="0" y="0" width="40" height="20" transform="translate(112 240) rotate(-84)"/>
-            <use href="#leaf" x="0" y="0" width="40" height="20" transform="translate(308 238) rotate(84)"/>
-          </g>
-
-          <g class="wrap">
-            <path d="M156 296 C182 288 238 288 264 296 L238 402 C224 418 196 418 182 402 Z" fill="url(#wrapGrad)" stroke="#24073f" stroke-width="1.5"/>
-            <path d="M156 296 L190 303 L181 407 L162 386 Z" fill="#a566dd" opacity=".5"/>
-            <path d="M264 296 L230 303 L239 407 L258 386 Z" fill="#2a0a4c" opacity=".55"/>
-            <path d="M190 303 C203 297 217 297 230 303 L226 411 L194 411 Z" fill="#5d2192" opacity=".45"/>
-            <ellipse cx="210" cy="298" rx="52" ry="8" fill="#26083f" opacity=".6"/>
-          </g>
-
-          <g class="roses">
-            <use class="rose-bloom rose-pink" style="--i:0" href="#rose" x="-45" y="-45" width="90" height="90" transform="translate(92 196) rotate(-34)"/>
-            <use class="rose-bloom" style="--i:1" href="#rose" x="-45" y="-45" width="90" height="90" transform="translate(330 192) rotate(32)"/>
-            <use class="rose-bloom rose-pink" style="--i:2" href="#rose" x="-54" y="-54" width="108" height="108" transform="translate(142 134) rotate(-20)"/>
-            <use class="rose-bloom" style="--i:3" href="#rose" x="-54" y="-54" width="108" height="108" transform="translate(280 136) rotate(18)"/>
-            <use class="rose-bloom" style="--i:4" href="#rose" x="-40" y="-40" width="80" height="80" transform="translate(150 208) rotate(-40)"/>
-            <use class="rose-bloom rose-pink" style="--i:5" href="#rose" x="-40" y="-40" width="80" height="80" transform="translate(272 210) rotate(38)"/>
-            <use class="rose-bloom rose-pink" style="--i:6" href="#rose" x="-28" y="-28" width="56" height="56" transform="translate(180 62) rotate(-28)"/>
-            <use class="rose-bloom" style="--i:7" href="#rose" x="-28" y="-28" width="56" height="56" transform="translate(244 66) rotate(30)"/>
-            <use class="rose-bloom" style="--i:8" href="#rose" x="-66" y="-66" width="132" height="132" transform="translate(210 92) rotate(-3)"/>
-          </g>
-
-          <g class="leaves-front" aria-hidden="true">
-            <use href="#leaf" x="0" y="0" width="44" height="22" transform="translate(178 158) rotate(-118)"/>
-            <use href="#leaf" x="0" y="0" width="40" height="20" transform="translate(244 152) rotate(118)"/>
-            <use href="#leaf" x="0" y="0" width="44" height="22" transform="translate(96 248) rotate(-72)"/>
-            <use href="#leaf" x="0" y="0" width="44" height="22" transform="translate(324 244) rotate(72)"/>
-          </g>
-        </svg>
+        <img class="bouquet-svg bouquet-art" src="assets/bead-bouquet.svg" alt="" />
       </div>
 
       <div class="envelope" id="envelope">
@@ -231,77 +29,13 @@
         <div class="letter" id="letter">
           <div class="letter-inner">
             <div class="letter-top">
-              <p class="dear">Dear Love,</p>
-              <p>Today is not a special date, but for me it is a unique day.</p>
+              <p class="dear">haiai baby,</p>
+              <p>im sorry, i feel really bad about what happened. i know i shouldn't have acted that way, and ive been thinking about it since then. i could've handled things better instead of acting like that.</p>
+              <br>
+              <p>i didn't mean to make you feel bad, baby. i know i made a mistake, and i'll to be better next time. i don't want us to keep having misunderstandings because of things i could've handled differently.😟</p>
             </div>
-            <svg class="bears" viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two little bears hugging">
-              <defs>
-                <linearGradient id="brownFur" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#c78f67"/>
-                  <stop offset="1" stop-color="#a76f4b"/>
-                </linearGradient>
-                <linearGradient id="creamFur" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#fffaf2"/>
-                  <stop offset="1" stop-color="#f5e6d4"/>
-                </linearGradient>
-                <radialGradient id="bearGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0" stop-color="#ffe3ea" stop-opacity=".85"/>
-                  <stop offset=".55" stop-color="#ffe3ea" stop-opacity=".32"/>
-                  <stop offset="1" stop-color="#ffe3ea" stop-opacity="0"/>
-                </radialGradient>
-              </defs>
-              <ellipse cx="110" cy="86" rx="84" ry="56" fill="url(#bearGlow)" opacity=".6"/>
-              <g fill="#f7a7bb" opacity=".45">
-                <path d="M64 42 C62 39 58 39 57 43 C56 46 59 49 64 53 C69 49 72 46 71 43 C70 39 66 39 64 42Z"/>
-                <path d="M160 30 C158.5 28 156 28 155.3 30.6 C154.6 33 157 35 160 37.6 C163 35 165.4 33 164.7 30.6 C164 28 161.5 28 160 30Z"/>
-                <path d="M178 60 C176.6 58.2 174.3 58.2 173.6 60.6 C173 63 175.2 64.8 178 67.2 C180.8 64.8 183 63 182.4 60.6 C181.7 58.2 179.4 58.2 178 60Z"/>
-              </g>
-              <g class="heart-pop">
-                <path d="M112 35 C108 28 98 28 96 36 C94 43 100 49 110 57 C120 49 126 43 124 36 C122 28 112 28 112 35Z" fill="#f27d9e"/>
-                <path d="M90 22 L90 27 M87.5 24.5 L92.5 24.5" stroke="#f7c0d0" stroke-width="1.6" stroke-linecap="round"/>
-                <circle cx="132" cy="24" r="1.8" fill="#f7c0d0"/>
-              </g>
-
-              <g class="bear bear--brown">
-                <ellipse cx="80" cy="118" rx="37" ry="28" fill="url(#brownFur)" stroke="#8a5738" stroke-width="1.6"/>
-                <path d="M100 106 C126 98 140 110 136 124 C132 138 112 138 104 126 Z" fill="#b57c54" stroke="#8a5738" stroke-width="1.6"/>
-                <circle cx="58" cy="46" r="12" fill="#b57c54" stroke="#8a5738" stroke-width="1.5"/>
-                <circle cx="58" cy="46" r="6" fill="#e8b18c"/>
-                <circle cx="102" cy="44" r="12" fill="#b57c54" stroke="#8a5738" stroke-width="1.5"/>
-                <circle cx="102" cy="44" r="6" fill="#e8b18c"/>
-                <circle cx="80" cy="70" r="33" fill="url(#brownFur)" stroke="#8a5738" stroke-width="1.6"/>
-                <ellipse cx="90" cy="80" rx="17" ry="12" fill="#f4d8bf"/>
-                <ellipse cx="73" cy="78" rx="9" ry="1.8" fill="#f2b7a2" opacity=".55"/>
-                <path d="M78 66 Q84 61 90 66" fill="none" stroke="#3d2a1c" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M98 65 Q103 61 108 64" fill="none" stroke="#3d2a1c" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M90 73 Q94 77 98 73" fill="none" stroke="#3d2a1c" stroke-width="2.2" stroke-linecap="round"/>
-                <ellipse cx="94" cy="70" rx="4.2" ry="3.2" fill="#4a2e1c"/>
-                <circle cx="95.4" cy="68.6" r="1" fill="#fff" opacity=".6"/>
-              </g>
-
-              <g class="bear bear--cream">
-                <ellipse cx="138" cy="120" rx="31" ry="26" fill="url(#creamFur)" stroke="#cbb39c" stroke-width="1.6"/>
-                <path d="M118 108 C100 102 90 112 93 124 C96 136 112 137 120 126 Z" fill="#fdf6ea" stroke="#cbb39c" stroke-width="1.5"/>
-                <circle cx="120" cy="56" r="10" fill="#f7ead9" stroke="#cbb39c" stroke-width="1.4"/>
-                <circle cx="120" cy="56" r="5" fill="#f5c9c9"/>
-                <circle cx="156" cy="54" r="10" fill="#f7ead9" stroke="#cbb39c" stroke-width="1.4"/>
-                <circle cx="156" cy="54" r="5" fill="#f5c9c9"/>
-                <circle cx="138" cy="76" r="27" fill="url(#creamFur)" stroke="#cbb39c" stroke-width="1.5"/>
-                <ellipse cx="128" cy="85" rx="13" ry="9" fill="#fffdf8"/>
-                <ellipse cx="152" cy="84" rx="7" ry="1.6" fill="#f4b8c0" opacity=".7"/>
-                <ellipse cx="120" cy="84" rx="7" ry="1.6" fill="#f4b8c0" opacity=".7"/>
-                <path d="M126 73 Q131 69 136 73" fill="none" stroke="#5b4432" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M143 72 Q148 69 152 72" fill="none" stroke="#5b4432" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M130 81 Q133 84 136 81" fill="none" stroke="#5b4432" stroke-width="2" stroke-linecap="round"/>
-                <ellipse cx="134" cy="78" rx="3.4" ry="2.6" fill="#6a4d38"/>
-                <circle cx="135.2" cy="76.8" r=".9" fill="#fff" opacity=".6"/>
-                <path d="M160 63 C168 58 172 63 169 69 C166 75 159 74 156 69" fill="#f5b3c6" stroke="#db8fa6" stroke-width="1"/>
-                <path d="M114 104 C108 96 112 88 118 90" fill="none" stroke="#e7d3bd" stroke-width="2" stroke-linecap="round"/>
-              </g>
-
-              <path d="M106 130 C114 138 128 138 136 130" fill="none" stroke="#e6c7c0" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4" opacity=".8"/>
-            </svg>
-            <p class="letter-bottom">I like you just the way you are.<br/>Happy month.</p>
+            <img class="bears" src="assets/usagi-reading.png" alt="" />
+            <p class="letter-bottom">im sorry, baby. <br/>😟😟</p>
           </div>
         </div>
         <div class="env-front"></div>
@@ -309,7 +43,7 @@
       </div>
     </div>
 
-    <button class="replay" id="replayBtn" type="button">tap to bloom again</button>
+  
 
     <div class="petals" id="petals" aria-hidden="true"></div>
   </main>

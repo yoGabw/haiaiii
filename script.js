@@ -2,29 +2,10 @@
   const body = document.body;
   const openBtn = document.getElementById('openBtn');
   const replayBtn = document.getElementById('replayBtn');
-  const starsEl = document.getElementById('stars');
   const petalsEl = document.getElementById('petals');
-  const flowers = document.querySelectorAll('.flower');
 
   let opened = false;
   let doneTimer = null;
-
-  /* --- starfield --- */
-  const stars = document.createDocumentFragment();
-  for (let i = 0; i < 150; i += 1) {
-    const star = document.createElement('span');
-    const size = Math.random() < 0.82 ? 1 + Math.random() * 1.4 : 2 + Math.random() * 1.8;
-    star.style.left = `${Math.random() * 100}%`;
-    star.style.top = `${Math.random() * 56}%`;
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-    star.style.animationDuration = `${2.4 + Math.random() * 4.6}s`;
-    star.style.animationDelay = `${-Math.random() * 6}s`;
-    if (size > 2.6) star.classList.add('bright');
-    if (i % 21 === 0) star.classList.add('flare');
-    stars.appendChild(star);
-  }
-  starsEl.appendChild(stars);
 
   /* --- drifting rose petals --- */
   const petalFrag = document.createDocumentFragment();
@@ -42,20 +23,9 @@
   petalsEl.appendChild(petalFrag);
 
   /* --- open / replay --- */
-  function restartFlowers() {
-    flowers.forEach((flower) => {
-      flower.style.animation = 'none';
-    });
-    void openBtn.offsetWidth;
-    flowers.forEach((flower) => {
-      flower.style.animation = '';
-    });
-  }
-
   function bloom() {
     if (opened) return;
     opened = true;
-    restartFlowers();
     body.classList.add('opened');
     openBtn.setAttribute('aria-expanded', 'true');
     openBtn.setAttribute('aria-label', 'Flowers opened');
